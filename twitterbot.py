@@ -1,5 +1,6 @@
 import tweepy
 from wordcloud_generate import generate_wordcloud_word
+import random
 from credentials import (
     access_token,
     bearer_token,
@@ -25,28 +26,37 @@ def reply_tweets():
     my_username = client.get_user(id=1178574797669883904).data.username
     replied_ids = open("replied_ids.txt", "r")
     replied_ids_list = [replied_id for replied_id in replied_ids]
+    print(replied_ids_list)
     replied_ids.close()
     if len(mentions) == 0:
         return "No mentions for now"
-        print(mentions[0])
     for mention in reversed(mentions[0]):
         text = mention.text
         tweet_id = mention.id
-        print(text)
 
         if (f"{tweet_id}\n" not in replied_ids_list) and ("get word cloud " in text):
             try:
                 requested_word = text.replace("@" + my_username, "")
-                requested_word = requested_word.replace("get word cloud ", "")
-                requested_word = requested_word.replace(" ", "")
-                generate_wordcloud_word(requested_word)
+                requested_word = requested_word.replace(" get word cloud ", "")
+                requested_word_split = requested_word.split()
+                if len(requested_word_split) == 1:
+                    background_color = random.choice(["black", "white"])
+                else:
+                    background_color = requested_word_split[-1]
+                requested_word = requested_word_split[0]
+                generate_wordcloud_word(requested_word, tweet_id, background_color)
                 client.create_tweet(
                     text="You can find the wordcloud <a href=" "> Link </a>",
                     in_reply_to_tweet_id=tweet_id,
                 )
+                client.like(tweet_id)
+                print("liked")
+                client.retweet(tweet_id)
                 replied_ids = open("replied_ids.txt", "a")
                 replied_ids.write(f"{tweet_id}\n")
-                print(replied_ids)
                 replied_ids.close()
             except:
-                return
+                pass
+
+        else:
+            print("replied or not a bot request")

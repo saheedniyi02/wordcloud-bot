@@ -18,7 +18,8 @@ def generate_statement_with_word(word):
     return new_column
 
 
-def generate_wordcloud_word(word):
+def generate_wordcloud_word(word, tweet_id, background_color):
+    background_color_colormap = {"white": "Accent", "black": "hsv"}
     statements_with_word = generate_statement_with_word(word)
     print(f"There are {len(statements_with_word)} statements with {word} in the data")
     text = " ".join(txt for txt in statements_with_word)
@@ -38,8 +39,8 @@ def generate_wordcloud_word(word):
         min_font_size=2,
         max_words=6000,
         relative_scaling=0.1,
-        colormap="hsv",
-        background_color="black",
+        colormap=background_color_colormap[background_color],
+        background_color=background_color,
     ).generate(text)
     wordcloud_img = wordcloud.to_image()
-    wordcloud_img.save(f"static/{word}.jpg")
+    wordcloud_img.save(f"static/{tweet_id}.jpg")
