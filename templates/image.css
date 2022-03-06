@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', cursive;
+}
+
+body {
+  text-align: center;
+}
+
+nav {
+  background-color: #00a0e9;
+  padding: 1.5rem 10vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+nav a {
+  color: white;
+  font-size: 1.5rem;
+  display: inline-block;
+  margin-left: .7rem;
+  transition: color .2s ease-in;
+}
+
+nav a:hover {
+  color : black;
+}
+
+.title {
+  margin: 3rem;
+}
+
+.gen-image {
+  width: 35rem;
+  border-radius: 1rem;
+}
+
+.seed-name {
+  display: inline-block;
+  position: relative;
+  color: #00a0e9;
+}
+
+.seed-name::after {
+  content: '';
+  width: 1rem;
+  height: .2rem;
+  background-color: black;
+  position: absolute;
+  bottom: .2rem;
+  right: -1rem;
+  animation: blink .5s linear infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.image-region {
+  margin-bottom: 5rem;
+}
+
+.image-region i {
+  display: block;
+  width: fit-content;
+  margin: auto;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  transition: color .2s ease-in;
+}
+
+.image-region i:hover {
+  color: #00a0e9;
+}
+
+.footer {
+  background-color: #00a0e9;
+  padding: 5rem 2rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  position: relative;
+}
+
+.puck {
+  position: absolute;
+  top: .4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  height: .4rem;
+  width: 5rem;
+  background-color: white;
+  border-radius: 1rem;
+}
+
+.divider {
+  width: 20rem;
+  height: .1rem;
+  background-color: white;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+.footer a {
+  text-decoration: none;
+  display: inline-block;
+  margin-left: .5rem;
+}
+
+.footer div p {
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer > p {
+  font-weight: bold;
+  margin: .5rem;
+}
+
+.footer .name {
+  font-weight: 400;
+}
+
+.footer i {
+  color: black;
+  transition: color .2s ease-in;
+  font-size: 1.2rem;
+}
+
+.footer i:hover {
+  color: white;
+}
+
+.footer .fa-robot {
+  color: black;
+}
