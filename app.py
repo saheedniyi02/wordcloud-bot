@@ -22,7 +22,7 @@ def reply():
 
 
 scheduler = BackgroundScheduler()
-scheduler.add_job(func=reply, trigger="interval", seconds=300)
+scheduler.add_job(func=reply, trigger="interval", seconds=60 * 7)
 scheduler.start()
 
 

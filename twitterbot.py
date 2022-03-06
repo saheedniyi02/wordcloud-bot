@@ -22,7 +22,7 @@ replied_ids_list = [replied_id for replied_id in replied_ids]
 
 
 def reply_tweets():
-    mentions = client.get_users_mentions(id=1178574797669883904, max_results=5)
+    mentions = client.get_users_mentions(id=1178574797669883904, max_results=100)
     my_username = client.get_user(id=1178574797669883904).data.username
     replied_ids = open("replied_ids.txt", "r")
     replied_ids_list = [replied_id for replied_id in replied_ids]
@@ -33,12 +33,14 @@ def reply_tweets():
     for mention in reversed(mentions[0]):
         text = mention.text
         tweet_id = mention.id
-
         if (f"{tweet_id}\n" not in replied_ids_list) and ("get word cloud " in text):
             try:
-                requested_word = text.replace("@" + my_username, "")
-                requested_word = requested_word.replace(" get word cloud ", "")
+                requested_word = text.replace("get word cloud ", "")
                 requested_word_split = requested_word.split()
+                for word in requested_word_split:
+                    if word.startswith("@"):
+                        requested_word_split.remove(word)
+                print(requested_word_split)
                 if len(requested_word_split) == 1:
                     background_color = random.choice(["black", "white"])
                 else:
@@ -56,6 +58,8 @@ def reply_tweets():
                 replied_ids.write(f"{tweet_id}\n")
                 replied_ids.close()
             except:
+                requested_word = requested_word.replace(" get word cloud ", "")
+                requested_word_split = requested_word.split()
                 pass
 
         else:
