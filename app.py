@@ -7,7 +7,7 @@ import time
 app = Flask(__name__, template_folder="templates")
 
 
-@app.route("/<int:tweet_id>/<string: requested_word>")
+@app.route("/<int:tweet_id>/<string:requested_word>")
 def wordcloud_page(tweet_id, requested_word):
     return render_template("image.html", image_name=tweet_id, requested_word=requested_word)
 
