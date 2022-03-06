@@ -73,17 +73,20 @@ nav a:hover {
   margin-bottom: 5rem;
 }
 
-.image-region i {
+.image-region abbr {
   display: block;
   width: fit-content;
   margin: auto;
-  cursor: pointer;
   margin-top: 1rem;
   font-size: 1.5rem;
+}
+
+.image-region a {
+  color: black;
   transition: color .2s ease-in;
 }
 
-.image-region i:hover {
+.image-region a:hover {
   color: #00a0e9;
 }
 
