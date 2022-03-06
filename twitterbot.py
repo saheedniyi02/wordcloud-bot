@@ -48,7 +48,7 @@ def reply_tweets():
                 requested_word = requested_word_split[0]
                 generate_wordcloud_word(requested_word, tweet_id, background_color)
                 client.create_tweet(
-                    text="You can find the wordcloud <a href=" "> Link </a>",
+                    text=f"You can find the wordcloud here https://wordcloudbot9ja.herokuapp.com/{tweet_id}/{requested_word}",
                     in_reply_to_tweet_id=tweet_id,
                 )
                 client.like(tweet_id)
