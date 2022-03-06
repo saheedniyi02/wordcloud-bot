@@ -9,7 +9,8 @@ app = Flask(__name__, template_folder="templates")
 
 @app.route("/<int:tweet_id>/<string:requested_word>")
 def wordcloud_page(tweet_id, requested_word):
-    return render_template("image.html", image_name=tweet_id, requested_word=requested_word)
+    image_path=url_for("static",filename=tweet_id+".jpg")
+    return render_template("image.html", image_name=tweet_id, image_path=image_path, requested_word=requested_word)
 
 
 @app.route("/download/<int:tweet_id>")
