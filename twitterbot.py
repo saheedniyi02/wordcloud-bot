@@ -1,20 +1,15 @@
 import tweepy
 from wordcloud_generate import generate_wordcloud_word
 import random
-from credentials import (
-    access_token,
-    bearer_token,
-    API_KEY,
-    API_SECRET_KEY,
-    access_token_secret,
-)
+import os
+
 
 client = tweepy.Client(
-    bearer_token=bearer_token,
-    consumer_key=API_KEY,
-    consumer_secret=API_SECRET_KEY,
-    access_token=access_token,
-    access_token_secret=access_token_secret,
+    bearer_token=os.environ.get("BEARER_TOKEN"),
+    consumer_key=os.environ.get("API_KEY"),
+    consumer_secret=os.environ.get("API_SECRET_KEY"),
+    access_token=os.environ.get("ACCESS_TOKEN"),
+    access_token_secret=os.environ.get("ACCESS_TOKEN_SECRET"),
 )
 
 replied_ids = open("util_files/replied_ids.txt", "r")
@@ -22,11 +17,9 @@ replied_ids_list = [replied_id for replied_id in replied_ids]
 
 
 def reply_tweets():
-    mentions = client.get_users_mentions(id=1178574797669883904, max_results=100)
-    my_username = client.get_user(id=1178574797669883904).data.username
+    mentions = client.get_users_mentions(id=1497668926737637376, max_results=100)
     replied_ids = open("replied_ids.txt", "r")
     replied_ids_list = [replied_id for replied_id in replied_ids]
-    print(replied_ids_list)
     replied_ids.close()
     if len(mentions) == 0:
         return "No mentions for now"
@@ -40,7 +33,6 @@ def reply_tweets():
                 for word in requested_word_split:
                     if word.startswith("@"):
                         requested_word_split.remove(word)
-                print(requested_word_split)
                 if len(requested_word_split) == 1:
                     background_color = random.choice(["black", "white"])
                 else:

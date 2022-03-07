@@ -33,9 +33,9 @@ def generate_wordcloud_word(word, tweet_id, background_color):
     wordcloud = WordCloud(
         stopwords=stopwords,
         max_font_size=100,
-        random_state=0,
-        width=800,
-        height=400,
+        random_state=42,
+        width=1600,
+        height=800,
         min_font_size=2,
         max_words=4000,
         relative_scaling=0.1,

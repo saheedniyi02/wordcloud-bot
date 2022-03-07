@@ -1,71 +1,74 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <!-- font awesome API -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./image.css">
 
-    <!-- google fonts API -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<head>
+  <!-- font awesome API -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="{{url_for( "static",filename="image.css" )}}">
 
-    <link rel="icon" href="./bot-head.png">
-    <title>Wordcloud Generator 🤖</title>
-  </head>
+  <!-- google fonts API -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
-  <body>
-    <nav>
-      <h1>
-        Wordcloud Generator
-      </h1>
+  <link rel="icon" href="{{url_for( "static" , filename="bot-head.png" )}}">
+  <title>Wordcloud Generator 🤖</title>
+</head>
+
+<body>
+  <nav>
+    <h1>
+      Wordcloud Generator
+    </h1>
+    <a href="https://twitter.com/wordcloudbot9ja" target="_blank">
+      <i class="fa-brands fa-twitter"></i>
+    </a>
+  </nav>
+  <h2 class="title">
+    Word cloud for <span class="seed-name">{{requested_word}}</span>
+  </h2>
+  <div class="image-region">
+    <img src="{{image_path}}" alt="generated wordcloud" class="gen-image" />
+    <abbr title="download">
+      <a href="/download/{{image_name}}">
+        <i class="fa-solid fa-download"></i>
+      </a>
+    </abbr>
+  </div>
+  <footer class="footer">
+    <div>
+      <p>
+        <i class="fa-solid fa-robot"></i> Tweet Bot<a
+          href="https://twitter.com/saheedniyi_02?t=co72QJkB1yUKJjEtZav7CQ&s=08" target="_blank"><i
+            class="fa-brands fa-twitter"></i></a>
+      </p>
+    </div>
+    <div class="divider"></div>
+    <p>
+      Created by - <span class="name">Saheed Niyi</span>
       <a href="https://twitter.com/saheedniyi_02?t=co72QJkB1yUKJjEtZav7CQ&s=08" target="_blank">
         <i class="fa-brands fa-twitter"></i>
       </a>
-    </nav>
-    <h2 class="title">
-      Word cloud for <span class="seed-name">{{requested_word}}</span>
-    </h2>
-    <div class="image-region">
-      <img 
-        
-        src="{{image_path}}" 
-        alt="generated wordcloud"
-        class="gen-image"
-      />
-      <abbr title="download">
-        <a href="/download/{{image_name}}">
-          <i class="fa-solid fa-download"></i>
-        </a>
-      </abbr>
-    </div>
-    <footer class="footer">
-      <div>
-        <p>
-          <i class="fa-solid fa-robot"></i> Tweet Bot<a href="https://twitter.com/saheedniyi_02?t=co72QJkB1yUKJjEtZav7CQ&s=08" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-        </p>
-      </div>
-      <div class="divider"></div>
-      <p>
-        Created by - <span class="name">Saheed Niyi</span>
-        <a href="https://twitter.com/saheedniyi_02?t=co72QJkB1yUKJjEtZav7CQ&s=08" target="_blank">
-          <i class="fa-brands fa-twitter"></i>
-        </a>
-        <a href="https://github.com/saheedniyi02" target="_blank">
-          <i class="fa-brands fa-github"></i>
-        </a>
-      </p>
-      <p>
-        Contributor - <span class="name">Joshua Oladeji</span>
-        <a href="https://twitter.com/Joshua_Oladeji_" target="_blank">
-          <i class="fa-brands fa-twitter"></i>
-        </a>
-        <a href="https://github.com/Joshua-Oladeji" target="_blank">
-          <i class="fa-brands fa-github"></i>
-        </a>
-      </p>
-      <div class="puck"></div>
-    </footer>
-  </body>
+      <a href="https://github.com/saheedniyi02" target="_blank">
+        <i class="fa-brands fa-github"></i>
+      </a>
+    </p>
+    <p>
+      Contributor - <span class="name">Joshua Oladeji</span>
+      <a href="https://twitter.com/Joshua_Oladeji_" target="_blank">
+        <i class="fa-brands fa-twitter"></i>
+      </a>
+      <a href="https://github.com/Joshua-Oladeji" target="_blank">
+        <i class="fa-brands fa-github"></i>
+      </a>
+    </p>
+    <div class="puck"></div>
+  </footer>
+</body>
+
 </html>
