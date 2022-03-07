@@ -30,7 +30,7 @@
     </a>
   </nav>
   <h2 class="title">
-    Word cloud for <span class="seed-name">{{requested_word}}</span>
+    Word cloud for <span class="seed-name">{% requested_word.capitalize() %}</span>
   </h2>
   <div class="image-region">
     <img src="{{image_path}}" alt="generated wordcloud" class="gen-image" />
