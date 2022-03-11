@@ -52,7 +52,7 @@ def reply_tweets():
             except:
                 requested_word = requested_word.replace(" get word cloud ", "")
                 requested_word_split = requested_word.split()
-                pass
+                print("error occured")
 
         else:
             print("replied or not a bot request")
