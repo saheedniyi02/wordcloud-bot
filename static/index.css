@@ -1,0 +1,146 @@
+@font-face {
+  font-family: 'Product Sans Bold';
+  src: url('./fonts/Product\ Sans\ Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Product Sans';
+  src: url('./fonts/Product\ Sans\ Regular.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Product Sans', cursive;
+}
+
+body {
+  background-color: #1A1A1A;
+  color: white;
+}
+
+nav {
+  padding: 2rem 10vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #46464642;
+}
+
+.logo,
+.menu,
+.nav-btn {
+  width: 33.3%;
+}
+
+.logo {
+  font-family: 'Product Sans Bold', cursive;
+  text-align: center;
+}
+
+.burger {
+  cursor: pointer;
+  font-size:1.2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  /* border: 1px solid white; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #46464642;
+}
+
+.nav-btn {
+  text-align: right;
+}
+
+.nav-btn a {
+  display: inline-block;
+  text-decoration: none;
+  /* background-color: #0C9BF9; */
+  background-image: linear-gradient(45deg, #0C9BF9, #AA22EE);
+  color: white;
+  font-weight: bold;
+  padding: .8rem 2rem;
+  font-family: 'Product Sans Bold', cursive;
+  border-radius: .7rem;
+}
+
+header {
+  padding: 5rem 10vw;
+  text-align: center;
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
+}
+
+header h1 {
+  margin-bottom: 2.5rem;
+  font-size: 2.5rem;
+  font-family: 'Product Sans Bold', cursive;
+}
+
+header h1 span {
+  font-size: 4rem;
+  display: inline-block;
+  background-image: linear-gradient(45deg, #0C9BF9, #AA22EE);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.header-img {
+  width: 100%;
+}
+
+.header-img img {
+  max-width: 80%;
+  border-radius: 2rem;
+  border: 2px solid #0C9BF9;
+}
+
+.about {
+  padding: 2rem 10vw;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrapper i {
+  margin: auto;
+  font-size: 10rem;
+  color: #0C9BF9;
+  /* display: block; */
+  /* width: 40%; */
+}
+
+.wrapper p {
+  width: 60%;
+  font-family: 'Product Sans', cursive;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  padding: 0 2rem;
+  color: #c4c4c4;
+}
+
+.wrapper span {
+  display: inline-block;
+  background-image: linear-gradient(45deg, #0C9BF9, #AA22EE);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.how-to-use {
+  padding: 7rem 10vw;
+}
+
+.how-to-use > h1 {
+  text-align: center;
+  font-size: 3rem;
+}
