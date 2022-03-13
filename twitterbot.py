@@ -13,10 +13,8 @@ client = tweepy.Client(
 )
 
 
-
-
 def reply_tweets():
-    mentions = client.get_users_mentions(id=1497668926737637376, max_results=100)
+    mentions = client.get_users_mentions(id=1497668926737637376, max_results=20)
     replied_ids = open("util_files/replied_ids.txt", "r")
     replied_ids_list = [replied_id for replied_id in replied_ids]
     replied_ids.close()
@@ -40,7 +38,7 @@ def reply_tweets():
                 generate_wordcloud_word(requested_word, tweet_id, background_color)
                 print("hi")
                 client.create_tweet(
-                    text=f"You can find the wordcloud here https://nigerianwordcloud.live/{tweet_id}/{requested_word}",
+                    text=f"You can find the wordcloud here https://wordcloud-bot-97bko.ondigitalocean.app/{tweet_id}/{requested_word}",
                     in_reply_to_tweet_id=tweet_id,
                 )
                 print("hi")
@@ -54,6 +52,5 @@ def reply_tweets():
                 requested_word = requested_word.replace(" get word cloud ", "")
                 requested_word_split = requested_word.split()
                 print("error occured")
-
         else:
             print("replied or not a bot request")
