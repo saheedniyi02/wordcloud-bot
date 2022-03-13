@@ -18,7 +18,7 @@ replied_ids_list = [replied_id for replied_id in replied_ids]
 
 def reply_tweets():
     mentions = client.get_users_mentions(id=1497668926737637376, max_results=100)
-    replied_ids = open("replied_ids.txt", "r")
+    replied_ids = open("util_files/replied_ids.txt", "r")
     replied_ids_list = [replied_id for replied_id in replied_ids]
     replied_ids.close()
     if len(mentions) == 0:
@@ -46,7 +46,7 @@ def reply_tweets():
                 client.like(tweet_id)
                 print("liked")
                 client.retweet(tweet_id)
-                replied_ids = open("replied_ids.txt", "a")
+                replied_ids = open("util_files/replied_ids.txt", "a")
                 replied_ids.write(f"{tweet_id}\n")
                 replied_ids.close()
             except:
