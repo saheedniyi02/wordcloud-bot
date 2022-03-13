@@ -39,6 +39,11 @@ nav {
   text-align: center;
 }
 
+.logo a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
 .burger {
   cursor: pointer;
   font-size:1.2rem;
@@ -128,7 +133,9 @@ header h1 span {
   color: #c4c4c4;
 }
 
-.wrapper span {
+.wrapper span,
+.brief span,
+.reply span {
   display: inline-block;
   background-image: linear-gradient(45deg, #0C9BF9, #AA22EE);
   background-clip: text;
@@ -143,4 +150,131 @@ header h1 span {
 .how-to-use > h1 {
   text-align: center;
   font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.how-to-use p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: #c4c4c4;
+}
+
+/* .how-to-use p:nth-child(3) {
+  font-family: 'Product Sans Bold', cursive;
+} */
+
+.command {
+  padding: 1rem 1.5rem;
+  margin: 2rem 0;
+  background-color: #46464642;
+  border-radius: .7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.3rem;
+}
+
+.command code {
+  font-family: monospace;
+  font-weight: bold;
+}
+
+.command span {
+  color: #addeff;
+  color: #e1a6ff;
+}
+
+.command a {
+  text-decoration: none;
+  /* cursor: pointer; */
+  color: #999999;
+  transition: color .3s ease-out;
+}
+
+.command a:hover {
+  color: #0C9BF9;
+}
+
+.option {
+  margin-bottom: 1rem;
+}
+
+p.option {
+  color: #8b8b8b;
+  font-size: 1.3rem;
+}
+
+.option span {
+  font-weight: bold;
+}
+
+footer {
+  border-top: 1px solid #46464642;
+  padding: 3rem 10vw;
+}
+
+footer > a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #ffffff;
+}
+
+footer > a span {
+  display: inline-block;
+  background-image: linear-gradient(45deg, #0C9BF9, #AA22EE);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.mentions {
+  text-align: center;
+}
+
+.mentions > h1 {
+  margin-bottom: 1.5rem;
+  text-decoration: underline;
+}
+
+.person {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem 0;
+  font-size: 1.3rem;
+}
+
+.person a {
+  display: inline-block;
+  text-decoration: none;
+  color: #8b8b8b;
+  margin-left: 1rem;
+  transition: color .3s ease-out;
+}
+
+.person a:hover {
+  color: #ffffff;
+}
+
+.person .fa-star {
+  color: #E3B341;
+  margin-right: .3rem;
+  margin-left: 0;
+  font-size: 1rem;
+}
+
+.open-source a {
+  text-decoration: none;
+  color: transparent;
+}
+
+.open-source {
+  text-decoration: none;
+  width: fit-content;
+  background-image: linear-gradient(45deg, #005BBB, #E1BC03);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }

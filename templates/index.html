@@ -15,7 +15,7 @@
       referrerpolicy="no-referrer"
     />
     <!-- <link rel="stylesheet" href="{{url_for( "static",filename="index.css" )}}"> -->
-    <!-- <link rel="icon" href="{{url_for( "static" , filename="bot-head.png" )}}"> -->
+    <!-- <link rel="icon" href="{{url_for( "static" , filename="tab-icon.png" )}}"> -->
     <link rel="stylesheet" href="../static/index.css">
     <title>9ja Word-Cloud bot</title>
   </head>
@@ -27,10 +27,12 @@
         </div>
       </div>
       <div class="logo">
-        <h1>9ja Word Cloud</h1>
+        <a href="">
+          <h1>9ja Word Cloud</h1>
+        </a>
       </div>
       <div class="nav-btn">
-        <a href="">Try It</a>
+        <a href="https://twitter.com/intent/tweet?text=@wordcloudbot9ja%20get%20word%20cloud%20[your-word]" target="_blank">Try It</a>
       </div>
     </nav>
 
@@ -45,18 +47,66 @@
           src="../static/1500907002280792066.jpg" 
           alt="a word-cloud for lagos"
         />
+        <!-- <img 
+          src="{{url_for( "static" , filename="1500907002280792066.jpg" )}}" 
+          alt="a word-cloud for lagos"
+        /> -->
       </div>
     </header>
 
     <section class="about">
       <div class="wrapper">
         <i class="fa-brands fa-twitter"></i>
-        <p><span>@Wordcloud bot</span> is a twitter bot which generates word cloud image of words that are commonly used in same statements or conversations with a requested image. The word cloud image is generated from Nigerian based data, gotten from <span>“Nairaland.com”</span>- Africa’s largest discussion forum. Posts (without comments/replies) by users on Nairaland will be used to generate the word cloud images.</p>
+        <p><span>@wordcloudbot9ja</span> is a twitter bot which generates word cloud image of words that are commonly used in same statements or conversations with a requested image. The word cloud image is generated from Nigerian based data, gotten from <span>“Nairaland.com”</span>- Africa’s largest discussion forum. Posts (without comments/replies) by users on Nairaland will be used to generate the word cloud images.</p>
       </div>
     </section>
 
     <section class="how-to-use">
       <h1>How to Use.</h1>
+      <p class="brief">It's as simple as mentioning <span>@wordcloudbot9ja</span> in a tweet.</p>
+      <!-- <p>🎯 Like this</p> -->
+      <div class="command">
+        <code>@wordcloudbot9ja get word cloud <span>[your-word]</span></code>
+        <div>
+          <a href="https://twitter.com/intent/tweet?text=@wordcloudbot9ja%20get%20word%20cloud%20[your-word]" target="_blank">
+            tweet <i class="fa-brands fa-twitter"></i>
+          </a>
+        </div>
+      </div>
+      <p class="option"><i class="fa-solid fa-circle-info"></i> You can optionally pick a background color by adding <span>white</span> or <span>black</span> to the end of the tweet. If none is specified, it randomly selects a white or black background.</p>
+      <p class="reply"><span>@wordcloudbot9ja</span> would reply your tweet in about 2 minutes with a link for you to view and download your Word Cloud image.</p>
     </section>
+
+    <footer>
+      <a href="https://twitter.com/wordcloudbot9ja" target="_blank">
+        <h1>
+          <span><i class="fa-brands fa-twitter"></i> @wordcloudbot9ja</span>
+        </h1>
+      </a>
+      <div class="mentions">
+        <h1>Contributors</h1>
+        <div class="person">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <p>Saheed Niyi</p>
+          <a href="https://github.com/saheedniyi02" target="_blank">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://twitter.com/saheedniyi_02?t=co72QJkB1yUKJjEtZav7CQ&s=08" target="_blank">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+        </div>
+        <div class="person">
+          <i class="fa-solid fa-star"></i>
+          <p>Joshua Oladeji</p>
+          <a href="https://github.com/Joshua-Oladeji" target="_blank">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://twitter.com/Joshua_Oladeji_" target="_blank">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
