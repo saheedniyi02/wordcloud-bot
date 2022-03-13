@@ -9,66 +9,75 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="{{url_for( "static",filename="image.css" )}}">
 
-  <!-- google fonts API -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
-
-  <link rel="icon" href="{{url_for( "static" , filename="bot-head.png" )}}">
-  <title>Wordcloud Generator 🤖</title>
+  <link rel="icon" href="{{url_for( "static" , filename="tab-icon.png" )}}">
+  <title>Word Cloud for {{requested_word}}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
   <nav>
-    <h1>
-      Wordcloud Generator
-    </h1>
-    <a href="https://twitter.com/wordcloudbot9ja" target="_blank">
-      <i class="fa-brands fa-twitter"></i>
-    </a>
-  </nav>
-  <h2 class="title">
-    Word cloud for <span class="seed-name">{{requested_word}}</span>
-  </h2>
-  <div class="image-region">
-    <img src="{{image_path}}" alt="generated wordcloud" class="gen-image" />
-    <abbr title="download">
-      <a href="/download/{{image_name}}">
-        <i class="fa-solid fa-download"></i>
-      </a>
-    </abbr>
-  </div>
-  <footer class="footer">
-    <div>
-      <p>
-        <i class="fa-solid fa-robot"></i> Tweet Bot<a
-          href="https://twitter.com/saheedniyi_02?t=co72QJkB1yUKJjEtZav7CQ&s=08" target="_blank"><i
-            class="fa-brands fa-twitter"></i></a>
-      </p>
+    <div class="menu">
+      <div class="burger">
+        <i class="fa-solid fa-bars"></i>
+      </div>
     </div>
-    <div class="divider"></div>
-    <p>
-      Created by - <span class="name">Saheed Ayanniyi</span>
-      <a href="https://twitter.com/saheedniyi_02?t=co72QJkB1yUKJjEtZav7CQ&s=08" target="_blank">
-        <i class="fa-brands fa-twitter"></i>
+    <div class="logo">
+      <a href="">
+        <h1>9ja Word Cloud</h1>
       </a>
-      <a href="https://github.com/saheedniyi02" target="_blank">
-        <i class="fa-brands fa-github"></i>
-      </a>
-    </p>
-    <p>
-      Contributor - <span class="name">Joshua Oladeji</span>
-      <a href="https://twitter.com/Joshua_Oladeji_" target="_blank">
-        <i class="fa-brands fa-twitter"></i>
-      </a>
-      <a href="https://github.com/Joshua-Oladeji" target="_blank">
-        <i class="fa-brands fa-github"></i>
-      </a>
-    </p>
-    <div class="puck"></div>
+    </div>
+    <div class="nav-btn">
+      <a href="https://twitter.com/intent/tweet?text=@wordcloudbot9ja%20get%20word%20cloud%20[your-word]"
+        target="_blank">Try It</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>
+      Word Cloud for
+      <br />
+      <span>{{requested_word}}</span>✨
+    </h1>
+    <div class="header-img">
+      <img src="{{image_path}}" alt="a word-cloud for {{requested_word}}" />
+      <abbr title="download">
+        <a href="/download/{{image_name}}">
+          <i class="fa-solid fa-download"></i>
+        </a>
+      </abbr>
+    </div>
+  </header>
+
+  <footer>
+    <a href="https://twitter.com/wordcloudbot9ja" target="_blank">
+      <h1>
+        <span><i class="fa-brands fa-twitter"></i> @wordcloudbot9ja</span>
+      </h1>
+    </a>
+    <div class="mentions">
+      <h1>Contributors</h1>
+      <div class="person">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <p>Azeez Saheed Ayanniyi</p>
+        <a href="https://github.com/saheedniyi02" target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://twitter.com/saheedniyi_02?t=co72QJkB1yUKJjEtZav7CQ&s=08" target="_blank">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+      </div>
+      <div class="person">
+        <i class="fa-solid fa-star"></i>
+        <p>Joshua Oladeji</p>
+        <a href="https://github.com/Joshua-Oladeji" target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://twitter.com/Joshua_Oladeji_" target="_blank">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+      </div>
+    </div>
   </footer>
 </body>
 

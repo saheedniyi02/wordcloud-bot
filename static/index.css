@@ -264,17 +264,3 @@ footer > a span {
   margin-left: 0;
   font-size: 1rem;
 }
-
-.open-source a {
-  text-decoration: none;
-  color: transparent;
-}
-
-.open-source {
-  text-decoration: none;
-  width: fit-content;
-  background-image: linear-gradient(45deg, #005BBB, #E1BC03);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-}
