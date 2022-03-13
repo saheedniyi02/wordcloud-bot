@@ -12,8 +12,7 @@ client = tweepy.Client(
     access_token_secret=os.environ.get("ACCESS_TOKEN_SECRET"),
 )
 
-replied_ids = open("util_files/replied_ids.txt", "r")
-replied_ids_list = [replied_id for replied_id in replied_ids]
+
 
 
 def reply_tweets():
@@ -39,10 +38,12 @@ def reply_tweets():
                     background_color = requested_word_split[-1]
                 requested_word = requested_word_split[0]
                 generate_wordcloud_word(requested_word, tweet_id, background_color)
+                print("hi")
                 client.create_tweet(
                     text=f"You can find the wordcloud here https://nigerianwordcloud.live/{tweet_id}/{requested_word}",
                     in_reply_to_tweet_id=tweet_id,
                 )
+                print("hi")
                 client.like(tweet_id)
                 print("liked")
                 client.retweet(tweet_id)
