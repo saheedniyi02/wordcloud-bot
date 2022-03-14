@@ -38,7 +38,7 @@ def reply_tweets():
                 generate_wordcloud_word(requested_word, tweet_id, background_color)
                 print("hi")
                 client.create_tweet(
-                    text=f"You can find the wordcloud here https://wordcloud-bot-97bko.ondigitalocean.app/{tweet_id}/{requested_word}",
+                    text=f"You can find the wordcloud here https://nigerianwordcloud.live/{tweet_id}/{requested_word}",
                     in_reply_to_tweet_id=tweet_id,
                 )
                 print("hi")
