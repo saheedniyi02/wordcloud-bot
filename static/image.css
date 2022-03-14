@@ -180,3 +180,36 @@ footer > a span {
   margin-left: 0;
   font-size: 1rem;
 }
+
+
+/* mobile responsiveness */
+@media screen and (max-width: 800px) {
+  nav {
+    padding: 1rem 5vw;
+  }
+
+  .nav-btn a {
+    padding: .5rem 1rem;
+  }
+
+  header {
+    padding: 3rem 5vw;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header h1 span {
+    font-size: 3rem;
+  }
+
+  .header-img img {
+    max-width: 100%;
+    border-radius: .8rem;
+  }
+
+  footer {
+    padding: 3rem 5vw;
+  }
+}

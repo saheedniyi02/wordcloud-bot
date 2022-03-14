@@ -264,3 +264,81 @@ footer > a span {
   margin-left: 0;
   font-size: 1rem;
 }
+
+
+/* mobile responsiveness */
+@media screen and (max-width: 800px) {
+  nav {
+    padding: 1rem 5vw;
+  }
+
+  .nav-btn a {
+    padding: .5rem 1rem;
+  }
+
+  header {
+    padding: 3rem 5vw;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header h1 span {
+    font-size: 3rem;
+  }
+
+  .header-img img {
+    max-width: 100%;
+    border-radius: .8rem;
+  }
+
+  .about {
+    padding: 2rem 5vw;
+  }
+
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .wrapper i {
+    order: 2;
+  }
+
+  .wrapper p {
+    order: 1;
+    width: 100%;
+    font-size: 1.3rem;
+    line-height: 1.2;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+
+  .how-to-use {
+    padding: 5rem 5vw;
+  }
+
+  .how-to-use > h1 {
+    font-size: 2rem;
+  }
+
+  .how-to-use p {
+    font-size: 1.3rem;
+    line-height: 1.2;
+  }
+
+  .command {
+    font-size: 1.1rem;
+    padding: .7rem 1rem;
+    margin: 1rem 0;
+  }
+
+  .command a {
+    display: inline-block;
+    margin-left: 1rem;
+  }
+
+  footer {
+    padding: 3rem 5vw;
+  }
+}
